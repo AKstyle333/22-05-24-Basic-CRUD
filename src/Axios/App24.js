@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 
 const App24 = () => {
     const [apiRes, setApiRes] = useState([]);
-    useEffect(() => {
+
+    const getApi = () => {
         axios
             .get("https://jsonplaceholder.typicode.com/photos")
             .then((res) => {
@@ -11,10 +12,15 @@ const App24 = () => {
                 setApiRes(res.data);
             })
             .catch((err) => console.log(err));
+    };
+    useEffect(() => {
+        getApi();
     }, []);
     return (
         <>
-            <h1 className="text-center m-5">CRUD with Axios API <sub className="fs-6">Code By AK</sub></h1>
+            <h1 className="text-center m-5">
+                CRUD with Axios API <sub className="fs-6">Code By AK</sub>
+            </h1>
             <div className="container row mx-auto">
                 {apiRes.map((val_, ind_) => {
                     return (
