@@ -3,7 +3,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from './App';
 import reportWebVitals from "./reportWebVitals";
-import App24 from "./Axios/App24";
+// import App24 from "./Axios/App24";
+import App25 from "./Fake-server-Axios/App25";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -12,7 +13,10 @@ root.render(
         {/* <App /> */}
 
         {/* run this for axios CRUD*/}
-        <App24 />
+        {/* <App24 /> */}
+
+        {/* run this for fake-server with axios CRUD */}
+        <App25/>
     </React.StrictMode>
 );
 
